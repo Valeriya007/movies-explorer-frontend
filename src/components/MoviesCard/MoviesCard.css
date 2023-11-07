@@ -1,0 +1,132 @@
+.movies__card {
+  list-style: none;
+  background-color: #222222;
+  border-radius: 6px;
+  box-sizing: border-box;
+
+}
+
+
+.movies__card-item {
+  display: grid;
+}
+
+.movie__info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 18px;
+}
+
+
+@media screen and (max-width: 767px) {
+  .movie__info {
+    margin: 14px;
+  }
+}
+
+.movie__title {
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 120%;
+  color: #fff;
+  margin: 0;
+}
+
+@media screen and (max-width: 520px) {
+  .movie__title {
+    font-size: 12px;
+    line-height: 111%;
+  }
+}
+
+.movie__duration {
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 138%;
+  color: #8B8B8B;
+}
+
+.movie__link {
+  transition: opacity .3s linear;
+}
+
+.movie__link:hover {
+  opacity: .7;
+}
+
+.movie__image {
+  max-width: 360px;
+  max-height: 200px;
+  background-size: cover;
+}
+
+@media screen and (max-width: 1024px) {
+  .movie__image {
+    max-width: 342px;
+    max-height: 190px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .movie__image {
+    max-width: 300px;
+    max-height: 268px;
+  }
+}
+
+.movie__btn-save {
+  width: 100px;
+  height: 29px;
+  border: none;
+  border-radius: 30px;
+  background-color: #313131;
+  color: #fff;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 91%;
+  margin: 14px auto;
+  cursor: pointer;
+  transition: opacity .3s linear;
+}
+
+.movie__btn-save:hover {
+  opacity: .7;
+}
+
+.movie__btn-save_active {
+  width: 100px;
+  height: 29px;
+  border: none;
+  border-radius: 30px;
+  background-color: #EE3465;
+  background-image: url(../../images/save_icon.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 14px auto;
+  cursor: pointer;
+  transition: opacity .3s linear;
+}
+
+.movie__btn-save_active:hover {
+  opacity: .7;
+}
+
+.movie__btn-delete {
+  width: 100px;
+  height: 29px;
+  border: none;
+  border-radius: 30px;
+  background-color: #313131;
+  background-image: url(../../images/icon_delete.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 14px auto;
+  cursor: pointer;
+  transition: opacity .3s linear;
+}
+
+.movie__btn-delete:hover {
+  opacity: .7;
+}
+
