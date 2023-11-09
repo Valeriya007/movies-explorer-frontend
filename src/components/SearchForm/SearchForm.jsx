@@ -25,10 +25,10 @@ export default function SearchForm() {
         </form>
         <div className="search__checkbox">
           <button
-            className={`search__tumb ${isActive ? 'search__tumb': 'search__tumb-disabled'} button-hover`}
+            className={`search__tumb ${isActive ? 'search__tumb': 'search__tumb-disabled'}`}
             type="button"
             onClick={changeState}>
-          </button>          
+          </button>
           <p className="search__text">Короткометражки</p>
         </div>
       </div>

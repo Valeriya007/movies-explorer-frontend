@@ -3,7 +3,6 @@
   background-color: #222222;
   border-radius: 6px;
   box-sizing: border-box;
-
 }
 
 
@@ -47,6 +46,13 @@
   color: #8B8B8B;
 }
 
+@media screen and (max-width: 520px) {
+  .movie__duration {
+    font-size: 10px;
+    line-height: 18px;
+  }
+}
+
 .movie__link {
   transition: opacity .3s linear;
 }
@@ -61,7 +67,7 @@
   background-size: cover;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1100px) {
   .movie__image {
     max-width: 342px;
     max-height: 190px;
@@ -86,6 +92,7 @@
   font-size: 12px;
   line-height: 91%;
   margin: 14px auto;
+  padding: 0;
   cursor: pointer;
   transition: opacity .3s linear;
 }
@@ -128,5 +135,19 @@
 
 .movie__btn-delete:hover {
   opacity: .7;
+}
+
+@media screen and (max-width: 767px) {
+  .movie__btn-save {
+    margin: 10px auto;
+  }
+
+  .movie__btn-save_active {
+    margin: 10px auto;
+  }
+
+  .movie__btn-delete {
+    margin: 10px auto;
+  }
 }
 

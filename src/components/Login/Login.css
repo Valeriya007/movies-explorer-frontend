@@ -4,22 +4,33 @@
   max-width: 396px;
   width: 100%;
   margin: 0 auto;
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+
+@media screen and (max-width: 768px) {
+  .login {
+    padding-top: 232px;
+    padding-bottom: 232px;
+  }
 }
 
 @media screen and (max-width: 520px) {
   .login {
     max-width: 260px;
+    padding-top: 56px;
+    padding-bottom: 30px;
   }
 }
 
 .login__logo {
-  padding: 70px 0 40px;
+  padding: 0 0 40px;
 }
 
 @media screen and (max-width: 520px) {
   .login__logo {
     margin: 0 auto;
-    padding: 56px 0 50px;
+    padding: 0 0 50px;
   }
 }
 
@@ -46,6 +57,7 @@
 
 @media screen and (max-width: 520px) {
   .login__title {
+    text-align: center;
     padding: 0 0 80px;
   }
 }
@@ -102,7 +114,7 @@
 
 @media screen and (max-width: 520px) {
   .login__btn {
-    margin-top: 136px;
+    margin-top: 287px;
     font-size: 12px;
   }
 }

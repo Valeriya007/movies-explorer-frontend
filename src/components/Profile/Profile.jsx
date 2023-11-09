@@ -1,7 +1,9 @@
 import './Profile.css';
 import { Link } from 'react-router-dom';
 
+
 export default function Profile() {
+
   return (
       <section className="profile">
         <h2 className="profile__title">Привет, Виталий!</h2>
@@ -22,7 +24,7 @@ export default function Profile() {
               type="text"
               placeholder="pochta@yandex.ru"
 				    />
-          </fieldset>
+        </fieldset>
           <button className="profile__btn" type="submit">
             Редактировать
           </button>

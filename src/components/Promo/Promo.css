@@ -1,23 +1,23 @@
 .promo {
   display: flex;
   justify-content: space-between;
-  padding: 75px 70px;
+  padding: 75px 70px 75px;
   background-color: #073042;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1100px) {
   .promo {
     flex-direction: column-reverse;
     justify-content: center;
     align-items: center;
-    padding: 140px 60px 76px;
+    padding: 140px 0 76px;
     text-align: center;
   }
 }
 
-@media screen and (max-width: 520px) {
+@media screen and (max-width: 767px) {
   .promo {
-    padding: 70px 10px 30px;
+    padding: 70px 0 30px;
   }
 }
 
@@ -25,84 +25,80 @@
   display: flex;
   flex-direction: column;
   color: #fff;
+  max-width: 640px;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1100px) {
   .promo__content {
     align-items: center;
   }
 }
 
 .promo__title {
-  max-width: 640px;
-  width: 100%;
   font-weight: 400;
   font-size: 50px;
-  line-height: 116%;
+  line-height: 58px;
   padding-bottom: 36px;
   margin: 0;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1100px) {
   .promo__title {
     font-size: 40px;
+    line-height: 50px;
     text-align: center;
-    padding: 48px 20px 26px;
+    padding: 48px 0 22px;
   }
 }
 
 @media screen and (max-width: 767px) {
   .promo__title {
+    text-align: center;
     font-size: 30px;
-    padding: 44px 18px 24px;
+    line-height: 38px;
+    padding: 44px 0 24px;
     letter-spacing: -1px;
   }
 }
 
-@media screen and (max-width: 520px) {
-  .promo__title {
-    padding-bottom: 30px;
-  }
-}
 
 .promo__subtitle {
   max-width: 310px;
-  width: 100%;
   font-weight: 400;
   font-size: 13px;
-  line-height: normal;
+  line-height: 15.73px;
   padding-bottom: 146px;
   margin: 0;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1100px) {
   .promo__subtitle {
+    text-align: center;
     max-width: 260px;
-    padding-bottom: 92px;
+    padding: 0 0 92px;
   }
 }
 
-@media screen and (max-width: 520px) {
+@media screen and (max-width: 767px) {
   .promo__subtitle {
     padding-bottom: 80px;
   }
 }
 
 .promo__link {
-  width: 129px;
-  height: 36px;
   display: flex;
-  justify-content: space-around;
-  text-align: center;
-  align-items: center;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 133%;
-  color: #fff;
-  text-decoration: none;
-  border: 1px solid #fff;
-  border-radius: 3px;
-  transition: opacity .3s linear;
+	justify-content: center;
+	text-decoration: none;
+	color: #FFFFFF;
+	border: 1px solid #FFFFFF;
+	width: 129px;
+	height: 36px;
+	text-align: center;
+	align-items: center;
+	font-weight: 500;
+	font-size: 12px;
+	line-height: 16px;
+	transition: opacity .3s linear;
   cursor: pointer;
 }
 
@@ -114,13 +110,13 @@
   width: 310px;
   height: 304px;
   background-image: url(../../images/landing-logo.png);
-  object-fit: cover;
+  background-size: contain;
 }
 
-@media screen and (max-width: 520px) {
+@media screen and (max-width: 767px) {
   .promo__img {
     width: 210px;
     height: 206px;
-    background-size: contain;
+
   }
 }

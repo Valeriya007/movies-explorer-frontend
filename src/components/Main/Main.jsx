@@ -6,15 +6,15 @@ import AboutMe from '../AboutMe/AboutMe.jsx';
 import Portfolio from '../Portfolio/Portfolio.jsx';
 import Login from '../Login/Login.jsx';
 import Register from '../Register/Register.jsx';
-import PageNotFound from '../PageNotFound/PageNotFound.jsx';
 import Profile from '../Profile/Profile.jsx';
 import SearchForm from '../SearchForm/SearchForm.jsx';
 import MoviesCardList from '../MoviesCardList/MoviesCardList.jsx';
+import PageNotFound from "../PageNotFound/PageNotFound.js";
 
 
 export default function Main({ name, setLoggedIn }) {
   return (
-    <main className="main">
+    <main className="content">
       {{
         home:
           <>

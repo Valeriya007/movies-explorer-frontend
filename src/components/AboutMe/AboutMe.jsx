@@ -3,7 +3,8 @@ import './AboutMe.css';
 import photo from '../../images/profile.png';
 
 export default function AboutMe() {
-  return (<section className="aboutme">
+  return (
+    <section className="aboutme">
     <h2 className="aboutme__title">Студент</h2>
     <div className="aboutme__container">
       <div className="aboutme__content">

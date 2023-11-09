@@ -34,15 +34,15 @@ export default function Header({ name, loggedIn }) {
 
 
   return (
-    <header
-      className={`header ${name !== 'home' ? 'header__home' : ''}`}>
-      <div>
+    <header className={`header ${name !== 'home' ? 'header__page' : ''}`}>
+      <div className="header__logo">
         <Link to={'/'}
-          className="header__logo"></Link>
+          className="header__logo-link">
+        </Link>
       </div>
       {name === 'home' && !loggedIn ?
-        <nav>
-          <ul className='header__links'>
+        <nav className='header__nav'>
+          <ul className='header__links-container'>
             <li>
               <Link to={'/signup'}
                 className="header__signup">Регистрация</Link>
@@ -55,53 +55,47 @@ export default function Header({ name, loggedIn }) {
         </nav>
         :
         <>
-          <nav className={`header__nav ${isOpen ? 'header__nav_open' : ''}`}>
-            <ul className='header__links header__links_type_page'>
-              <li className="header__link-container">
-                <Link
-                  to={'/'}
+          <nav className={`header__nav_type_page ${isOpen ? 'header__nav_open' : ''}`}>
+            <ul className='header__links-container header__links-container_type_page'>
+              <li className='header__link-container'>
+                <Link to={'/'}
                   className={`header__link ${pathname === '/' ? 'header__link_active' : ''}`}
                   onClick={onLink}
                 >Главная
                 </Link>
               </li>
-              <li className="header__link-container">
-                <Link
-                  to={'/movies'}
+              <li className='header__link-container'>
+                <Link to={'/movies'}
                   className={`header__link ${pathname === '/movies' ? 'header__link_active' : ''}`}
                   onClick={onLink}
                 >Фильмы
                 </Link>
               </li>
-              <li className="header__link-container">
-                <Link
-                  to={'/saved-movies'}
+              <li className='header__link-container'>
+                <Link to={'/saved-movies'}
                   className={`header__link ${pathname === '/saved-movies' ? 'header__link_active' : ''}`}
                   onClick={onLink}
                 >Сохранённые фильмы
                 </Link>
               </li>
-              <li className="header__link-container">
-                <Link
-                  to={'/profile'}
-                  className={`header__link header__link_type_profile ${pathname === '/profile' ? 'header__link_active' : ''}`}
+              <li className='header__link-container'>
+                <Link to={'/profile'}
+                  className={`header__link header__link_type_accaunt ${pathname === '/profile' ? 'header__link_active' : ''}`}
                   onClick={onLink}
-                >Аккаунт <div className='header__profile-icon'></div>
+                >Аккаунт <div className='header__accaunt-icon'></div>
                 </Link>
               </li>
             </ul>
             <button
-              className="header__burger-close"
+              className='header__burger-close'
               type='button'
-              onClick={handelClick}
-              >
+              onClick={handelClick}>
             </button>
           </nav>
           <button
-            className="header__burger"
+            className='header__burger'
             type='button'
-            onClick={handelClick}
-            >
+            onClick={handelClick}>
           </button>
         </>
       }

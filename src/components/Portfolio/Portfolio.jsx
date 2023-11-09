@@ -11,7 +11,7 @@ export default function Portfolio() {
             <Link to={"https://github.com/Valeriya007/how-to-learn"}
               className="portfolio__link"
               target="_blank">
-              Статичный сайт
+              <p className='portfolio__link-subtitle'>Статичный сайт</p>
               <button className="portfolio__link-btn" type="button"></button>
             </Link>
           </li>
@@ -19,7 +19,7 @@ export default function Portfolio() {
             <Link to={"https://github.com/Valeriya007/russian-travel"}
               className="portfolio__link"
               target="_blank">
-              Адаптивный сайт
+              <p className='portfolio__link-subtitle'>Адаптивный сайт</p>
               <button className="portfolio__link-btn" type="button"></button>
             </Link>
           </li>
@@ -27,7 +27,7 @@ export default function Portfolio() {
             <Link to={"https://github.com/Valeriya007/react-mesto-auth"}
               className="portfolio__link"
               target="_blank">
-              Одностраничное приложение
+              <p className='portfolio__link-subtitle'>Одностраничное приложение</p>
               <button className="portfolio__link-btn" type="button"></button>
             </Link>
           </li>

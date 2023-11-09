@@ -4,24 +4,36 @@
   max-width: 396px;
   width: 100%;
   margin: 0 auto;
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+
+@media screen and (max-width: 768px) {
+  .register {
+    padding-top: 232px;
+    padding-bottom: 232px;
+  }
 }
 
 @media screen and (max-width: 520px) {
   .register {
     max-width: 260px;
+    padding-top: 56px;
+    padding-bottom: 30px;
   }
 }
 
 .register__logo {
-  padding: 70px 0 40px;
+  padding: 0 0 40px;
 }
 
 @media screen and (max-width: 520px) {
   .register__logo {
     margin: 0 auto;
-    padding: 56px 0 50px;
+    padding: 0 0 50px;
   }
 }
+
 
 .register__logo-link {
   background-image: url(../../images/logo.svg);
@@ -46,7 +58,8 @@
 
 @media screen and (max-width: 520px) {
   .register__title {
-    padding: 0 0 80px;
+   text-align: center;
+  padding: 0 0 80px;
   }
 }
 
@@ -105,18 +118,20 @@
   padding: 13px 0 15px;
   margin-top: 136px;
   transition: opacity .3s linear;
-}
-
-@media screen and (max-width: 520px) {
-  .register__btn {
-    margin-top: 126px;
-    font-size: 12px;
-  }
+  cursor: pointer;
 }
 
 .register__btn:hover {
   opacity: .7;
 }
+
+@media screen and (max-width: 520px) {
+  .register__btn {
+    margin-top: 223px;
+    font-size: 12px;
+  }
+}
+
 
 .register__error {
   color: #EE3465;

@@ -24,6 +24,7 @@ export default function Login() {
           <input
             className="login__input"
             type="text"
+            placeholder="••••••••"
             required=""
 				  />
         </fieldset>
