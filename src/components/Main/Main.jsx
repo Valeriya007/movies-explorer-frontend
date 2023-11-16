@@ -28,7 +28,7 @@ export default function Main({
 }) {
 
   return (
-    <main className="main">
+    <main className="content">
       {{
         signup: <Register
           name={name}
