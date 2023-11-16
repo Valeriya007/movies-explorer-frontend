@@ -1,0 +1,132 @@
+/* style for signin, signup */
+.auth__error-req {
+  display: block;
+  width: 100%;
+  min-height: 14px;
+  font-size: 11px;
+  font-weight: 400;
+  line-height: normal;
+  color: #FF004C;
+  text-align: center;
+  margin-top: 155px;
+  visibility: hidden;
+}
+
+@media screen and (max-width: 520px) {
+  .auth__error-req {
+    margin-top: 241px;
+  }
+}
+
+.auth__error-req_active {
+  visibility: visible;
+}
+
+.auth__error-req_type_register {
+  margin-top: 80px;
+}
+
+@media screen and (max-width: 520px) {
+  .auth__error-req_type_register {
+    margin-top: 167px;
+  }
+}
+
+.auth__save-btn {
+  color: #fff;
+  background-color: #4285F4;
+  border: none;
+  border-radius: 3px;
+  width: 100%;
+  min-height: 45px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: normal;
+  padding: 0;
+  margin-top: 20px;
+  cursor: pointer;
+  transition: background-color .3s linear;
+}
+
+@media screen and (max-width: 520px) {
+  .auth__save-btn {
+    font-size: 12px;
+  }
+}
+
+.auth__save-btn_disabled {
+  background-color: #F8F8F8;
+  color: #C2C2C2;
+  pointer-events: none;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .auth__save-btn:hover {
+    background-color: rgba(66, 133, 244, .8);
+  }
+}
+
+/*style profile*/
+
+.profile__error-req {
+  visibility: hidden;
+  display: block;
+  margin: 152px 0 0 0;
+  min-height: 14px;
+  text-align: center;
+  font-size: 11px;
+  font-weight: 400;
+  line-height: normal;
+  color: #FF004C;
+}
+
+@media screen and (max-width: 768px) {
+  .profile__error-req {
+    margin-top: 157px;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .profile__error-req {
+    margin-top: 325px;
+  }
+}
+
+.profile__error-req_type_fail {
+  visibility: visible;
+}
+
+.profile__error-request_type_ok {
+  visibility: visible;
+  color: #fff;
+}
+
+.profile__save-btn {
+  display: block;
+  width: 100%;
+  margin-top: 20px;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  text-align: center;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: normal;
+  color: #fff;
+  cursor: pointer;
+  transition: opacity .3s linear;
+}
+
+@media screen and (max-width: 520px) {
+  .profile__save-btn {
+    font-size: 12px;
+  }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .profile__save-btn:hover {
+    opacity: .7;
+  }
+}
+
+
