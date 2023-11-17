@@ -102,7 +102,7 @@ class ApiMain {
 
 
 const apiMain = new ApiMain({
-  baseUrl: "http://localhost:3000",
+  baseUrl: 'https://api.diplom.valeriya.nomoredomainsrocks.ru'
 });
 
 export default apiMain
