@@ -32,40 +32,7 @@ export default function MoviesCard({
     return (hours === 0 ? `${minutes}м` : minutes === 0 ? `${hours}ч` : `${hours}ч${minutes}м`)
   }
 
-  return pathname === "/movies" ? (
-    <li className='movies__card'>
-      <article className="movies__card-item">
-        <div className="movie__info">
-          <h2 className="movie__title">{data.nameRU}</h2>
-          <span className="movie__duration">{convertTime(data.duration)}</span>
-        </div>
-        <Link to={data.trailerLink} target='_blank'>
-          <img
-            src={pathname === '/movies' ? `https://api.nomoreparties.co${data.image.url}` : data.image}
-            alt={data.name}
-            className='movie__image' />
-        </Link>
-        {click
-          ? (
-            <button
-              className="movie__btn-save_active"
-              type='button'
-              onClick={onClick}>
-            </button>
-          ): (
-            <button
-              className="movie__btn-save"
-              type='button'
-              onClick={onClick}>
-              Сохранить
-            </button>
-          )
-        }
-      </article>
-    </li>
-     ) : (
-      (pathname === "/saved-movies",
-        (
+  return (
     <li className='movies__card'>
       <article className="movies__card-item">
         <div className="movie__info">
@@ -73,21 +40,28 @@ export default function MoviesCard({
           <span className="movie__duration">{convertTime(data.duration)}</span>
         </div>
         <Link to={data.trailerLink}
-          className="movie__link"
-          target='_blank'>
+          target='_blank'
+          className='movie__link'>
           <img
-            className="movie__image"
             src={pathname === '/movies' ? `https://api.nomoreparties.co${data.image.url}` : data.image}
             alt={data.name}
-          />
+            className='movie__image' />
         </Link>
-            <button
-              className="movie__btn-delete"
-              type='button'
-              onClick={() => onDelete(data._id)}>
-            </button>
+        {pathname === '/movies' ?
+          <button
+            type='button'
+            className={`movie__btn-save ${click ? 'movie__btn-save_active' : ''}`}
+            onClick={onClick}>
+            {click ? "" : "Сохранить"}
+          </button>
+            :
+          <button
+            type='button'
+            className='movie__btn-delete'
+            onClick={() => onDelete(data._id)}>
+          </button>
+        }
       </article>
     </li>
-      ))
-     )
+  )
 }

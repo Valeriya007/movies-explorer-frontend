@@ -4,8 +4,10 @@ https://www.figma.com/file/uSf7jRsIIugQFAchyiY4zW/%D0%94%D0%B8%D0%BF%D0%BB%D0%BE
 
 ## Ссылки на проект
 
+Ссылка на Pull Request https://github.com/Valeriya007/movies-explorer-frontend/pull/2
+
 IP-адрес 130.193.51.249
 
-Frontend https://diplom.valeriya.nomoredomainsrocks.ru
+Frontend https://diplom.valeriya.nomoredomainsmonster.ru
 
 Backend https://api.diplom.valeriya.nomoredomainsrocks.ru
