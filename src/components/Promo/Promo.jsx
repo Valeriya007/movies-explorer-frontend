@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { HashLink } from 'react-router-hash-link';
 import './Promo.css';
 
 export default function Promo() {
@@ -11,10 +11,10 @@ export default function Promo() {
         <p className="promo__subtitle">
           Листайте ниже, чтобы узнать больше про этот проект и его создателя.
         </p>
-        <Link to='#about'
+        <HashLink smooth to='#about'
           className="promo__link">
           Узнать больше
-        </Link>
+        </HashLink>
       </div>
       <div className="promo__img" />
     </section>
