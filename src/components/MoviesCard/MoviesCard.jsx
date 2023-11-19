@@ -1,70 +1,72 @@
 import { Link, useLocation } from 'react-router-dom';
 import './MoviesCard.css';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 
-export default function MoviesCard({ name, src, duration, trailerLink }) {
+export default function MoviesCard({
+  data,
+  savedMovies,
+  addMovie,
+  onDelete
+}) {
   const { pathname } = useLocation();
   const [click, setClick] = useState(false);
 
-  function onClick() {
-    if (click) {
-      setClick(false);
-    } else {
-      setClick(true);
-    }
-  };
+  useEffect(() => {
+    if (pathname === '/movies')
+      setClick(savedMovies.some(item => data.id === item.movieId))
+  }, [savedMovies, data.id, setClick, pathname])
 
-  return pathname === "/movies" ? (
+  function onClick() {
+    if (savedMovies.some(item => data.id === item.movieId)) {
+      setClick(true)
+      addMovie(data)
+    } else {
+      setClick(false)
+      addMovie(data)
+    }
+  }
+
+  function time(duration) {
+    const minutes = duration % 60;
+    const hours = Math.floor(duration / 60);
+    return (
+      hours === 0 ? `${minutes}м`
+        : minutes === 0 ? `${hours}ч`
+        : `${hours}ч${minutes}м`)
+  }
+
+  return (
     <li className="movies__card">
       <article className="movies__card-item">
         <div className="movie__info">
-          <h2 className="movie__title">{name}</h2>
-          <span className="movie__duration">{duration}</span>
+          <h2 className="movie__title">{data.nameRU}</h2>
+          <span className="movie__duration">{time(data.duration)}</span>
         </div>
-        <Link to={trailerLink}
+        <Link to={data.trailerLink}
           className="movie__link"
           target="_blank">
           <img
             className="movie__image"
-            src={src}
-            alt={name}
+            src={pathname === '/movies' ? `https://api.nomoreparties.co${data.image.url}` : data.image}
+            alt={data.name}
           />
         </Link>
-
-        {click
-          ? (
-            <button className="movie__btn-save_active" onClick={onClick}></button>
-          ) : (
-            <button className="movie__btn-save" onClick={onClick}>Сохранить</button>
-          )
+        {pathname === '/movies' ?
+          <button
+            type="button"
+            className={`movie__btn-save ${click ? 'movie__btn-save_active' : ''}`}
+            onClick={onClick}>
+            {click ? '' : 'Сохранить'}
+          </button>
+            :
+          <button
+            type="button"
+            className="movie__btn-delete"
+            onClick={() => onDelete(data._id)}>
+          </button>
         }
-      </article>
+        </article>
     </li>
-  ) : (
-      (pathname === "/saved-movies",
-        (
-        <li className="movies__card">
-      <article className="movies__card-item">
-        <div className="movie__info">
-          <h2 className="movie__title">{name}</h2>
-          <span className="movie__duration">{duration}</span>
-        </div>
-        <Link to={trailerLink}
-          className="movie__link"
-          target="_blank">
-          <img
-            className="movie__image"
-            src={src}
-            alt={name}
-          />
-        </Link>
-        <button
-              className="movie__btn-delete"
-              onClick={onClick}
-            ></button>
-      </article>
-        </li>
-    ))
   )
 }

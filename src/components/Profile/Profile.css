@@ -1,125 +1,60 @@
-.profile {
- display: flex;
- flex-direction: column;
- align-items: center;
- max-width: 410px;
- width: 100%;
- margin: 0 auto;
-padding-bottom: 70px;
+.page__profile {
+  margin: 0 auto;
+  padding-top: 74px;
+  max-width: 410px;
 }
 
 @media screen and (max-width: 768px) {
-  .profile {
-    padding-bottom: 269px;
+  .page__profile {
+    padding-top: 236px;
   }
 }
 
 @media screen and (max-width: 520px) {
-  .profile {
+  .page__profile {
+    padding-top: 70px;
     max-width: 260px;
-    padding-bottom: 40px;
   }
 }
-
-
 .profile__title {
   color: #fff;
+  text-align: center;
   font-size: 24px;
   font-weight: 500;
   line-height: normal;
-  padding: 74px 0 123px;
-  margin: 0;
+  margin: 0 0 123px 0;
 }
 
 @media screen and (max-width: 768px) {
   .profile__title {
-    padding: 236px 0 96px;
+    margin-bottom: 95px;
   }
 }
 
 @media screen and (max-width: 520px) {
   .profile__title {
-    padding: 70px 0 80px;
-  }
-}
-
-.profile__form {
-  display: flex;
-  flex-direction: column;
-  max-width: 410px;
-  width: 100%;
-  align-items: center;
-  row-gap: 17px;
-}
-
-.profile__field {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  border: none;
-  border-bottom: 1px solid #424242;
-  padding:0 0 16px;
-  margin: 0;
-}
-
-.profile__field:last-of-type {
-  border-bottom: none ;
-}
-
-.profile__label {
-  color: #fff;
-  font-size: 11px;
-  font-weight: 500;
-  line-height: normal;
-}
-
-.profile__input {
-  color: #fff;
-  font-size: 11px;
-  font-weight: 400;
-  line-height: normal;
-  border: none;
-  text-align: end;
-  background-color: initial;
-  padding: 0;
-}
-
-.profile__btn {
-  border: none;
-  background-color: initial;
-  color: #fff;
-  font-size: 13px;
-  font-weight: 400;
-  line-height: normal;
-  cursor: pointer;
-  padding: 192px 0 16px;
-  transition: opacity .3s linear;
-}
-
-.profile__btn:hover {
-  opacity: .7;
-}
-
-@media screen and (max-width: 768px) {
-  .profile__btn {
-    padding: 180px 0 16px;
-  }
-}
-
-@media screen and (max-width: 520px) {
-  .profile__btn {
-    padding: 348px 0 16px;
+    margin-bottom: 79px;
   }
 }
 
 
 .profile__link {
+  text-decoration: none;
   color: #EE3465;
   font-weight: 500;
   font-size: 13px;
   line-height: normal;
-  text-decoration: none;
+  display: block;
+  margin-top: 16px;
+  width: 100%;
+  text-align: center;
   transition: opacity .3s linear;
+}
+
+@media screen and (max-width: 520px) {
+  .profile__link {
+    font-size: 12px;
+  }
 }
 
 .profile__link:hover {
