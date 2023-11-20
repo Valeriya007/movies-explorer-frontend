@@ -111,7 +111,7 @@ function App() {
         setIsEdit(false);
       })
       .catch((error) => {
-        console.error(`Ошибкак редактирования ${error}`)
+        console.error(`Ошибка редактирования ${error}`)
         setIsError(true)
       })
       .finally(() => setIsSend(false))
