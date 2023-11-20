@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useState } from "react";
-import './SavedMovies.css';
 import SearchForm from "../SearchForm/SearchForm";
 import MoviesCardList from "../MoviesCardList/MoviesCardList";
+import { ShortDuration } from '../../utils/constants';
 
 export default function SavedMovies({
   savedMovie,
@@ -19,7 +19,7 @@ export default function SavedMovies({
     setSearchedMovie(search)
     setFilterMovies(movies.filter((movie) => {
       const searchName = movie.nameRU.toLowerCase().includes(search.toLowerCase())
-      return isCheck ? (searchName && movie.duration <= 40) : searchName
+      return isCheck ? (searchName && movie.duration <= ShortDuration) : searchName
     }))
   }, [])
 

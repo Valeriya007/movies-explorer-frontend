@@ -3,7 +3,7 @@
     margin: 0 auto;
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1100px) {
   .movies {
     padding-left: 30px;
     padding-right: 30px;
@@ -13,25 +13,6 @@
 @media screen and (max-width: 767px) {
   .movies {
     padding: 50px 10px 0;
-  }
-}
-
-.saved-movies {
-  padding: 80px 70px 256px;
-  margin: 0 auto;
-}
-
-@media screen and (max-width: 1100px) {
-  .saved-movies {
-    padding-left: 30px;
-    padding-right: 30px;
-    padding-bottom: 224px;
-  }
-}
-
-@media screen and (max-width: 767px) {
-  .saved-movies {
-    padding: 48px 10px 230px;
   }
 }
 
@@ -45,7 +26,7 @@
     justify-content: center;
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1100px) {
   .movies__grid {
     grid-template-columns: repeat(auto-fit, 342px);
     column-gap: 24px;

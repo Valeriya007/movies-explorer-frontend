@@ -86,16 +86,14 @@
   cursor: pointer;
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1100px) {
   .movie__image {
-    width: 342px;
     height: 190px;
   }
 }
 
 @media screen and (max-width: 767px) {
   .movie__image {
-    width: 300px;
     height: 168px;
   }
 }
