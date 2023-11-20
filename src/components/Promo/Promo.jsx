@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom';
 import './Promo.css';
 
 export default function Promo() {
@@ -11,10 +10,7 @@ export default function Promo() {
         <p className="promo__subtitle">
           Листайте ниже, чтобы узнать больше про этот проект и его создателя.
         </p>
-        <Link to='#about'
-          className="promo__link">
-          Узнать больше
-        </Link>
+        <a className="promo__link" href="#about">Узнать больше</a>
       </div>
       <div className="promo__img" />
     </section>

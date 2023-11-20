@@ -1,4 +1,5 @@
 .footer {
+  visibility: visible;
   padding: 56px 0 0;
   margin: 0 70px;
 }
@@ -12,9 +13,31 @@
 
 @media screen and (max-width: 520px) {
   .footer {
-    padding-top: 50;
     margin: 0 10px;
   }
+}
+
+
+.footer_type_saved-movies {
+  visibility: visible;
+  padding: 306px 0 0;
+}
+
+@media screen and (max-width: 768px) {
+  .footer_type_saved-movies {
+    padding-top: 260px;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .footer_type_saved-movies {
+    padding-top: 256px;
+
+  }
+}
+
+.footer_type_profile {
+  visibility: hidden;
 }
 
 .footer__title {
